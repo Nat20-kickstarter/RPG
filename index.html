@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nomadic Knight Adventure</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>RPG Text Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #ffffff;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #gameOutput {
+            width: 100%;
+            height: 70%;
+            background-color: #000000;
+            color: #00ff00;
+            padding: 10px;
+            border: none;
+            resize: none;
+            overflow-y: auto;
+        }
+        #userInput {
+            width: 100%;
+            height: 30px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Nomadic Knight Adventure</h1>
-        <div id="story" class="story"></div>
-        <div id="choices" class="choices"></div>
-        <button id="restartButton" class="restart-button" style="display: none;" onclick="startGame()">Restart Game</button>
-    </div>
+    <textarea id="gameOutput" readonly></textarea>
+    <input type="text" id="userInput" autofocus>
     <script src="script.js"></script>
 </body>
 </html>
